@@ -1,5 +1,5 @@
-\documentclass{article}
-%\documentclass[12pt]{article}
+%\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -9,15 +9,15 @@
 
 \usepackage{showlabels}
 
-%\textwidth = 6.0 in
-%\textheight = 8.5 in
-%\oddsidemargin = 0.0 in
-%\evensidemargin = 0.0 in
-%\topmargin = 0.2 in
-%\headheight = 0.0 in
-%\headsep = 0.0 in
-%%\parskip = 0.05in
-%\parindent = 0.35in
+\textwidth = 6.0 in
+\textheight = 8.5 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.2 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+%\parskip = 0.05in
+\parindent = 0.35in
 
 
 
@@ -878,20 +878,22 @@ The potential is given by a sum of $ D $ and $ F $ terms
 		\\
 %
 \notag
-			& \phantom{~~=~~  -\,  2\sqrt{2}\, \frac{x_1 ~+~ i x_2}{N r^2} \,\lgr \right.}
-			\left( n\nbar ~-~ 1/N \right )
+%			& \phantom{~~=~~  -\,  2\sqrt{2}\, \frac{x_1 ~+~ i x_2}{N r^2} \,\lgr \right.}
+			& \phantom{~~=~~  -\,  2\sqrt{2}}
+			~+~ \left( n\nbar ~-~ 1/N \right )
 			\Bigl\{ \phi_1 ( f + ( N-1 ) f_N ) ~-~ \phi_2 ( f - f_N) \Bigr\}
 		\left. \rgr\, \zeta_L 
 		\\
 %
 \notag
 \ov{\wt{\psi}}_{\dot{1}} & ~~=~~    2\sqrt{2} \, \frac{x_1 ~-~ i x_2}{N r^2} \,
-		\lgr \frac{1}{N} \phi_1 ( f + (N-1) f_N ) ~+~ \frac{N-1}{N} \phi_2 ( f - f_N ) ~+~ \right.
+		\lgr \frac{1}{N} \phi_1 ( f + (N-1) f_N ) ~+~ \frac{N-1}{N} \phi_2 ( f - f_N ) \right.
 		\\
 %
 \notag
-			& \phantom{~~=~~    2\sqrt{2} \, \frac{x_1 ~-~ i x_2}{N r^2} \,\lgr \right.}
-			\left( n\nbar ~-~ 1/N \right )
+%			& \phantom{~~=~~    2\sqrt{2} \, \frac{x_1 ~-~ i x_2}{N r^2} \,\lgr \right.}
+			& \phantom{~~=~~  -\,  2\sqrt{2}}
+			~+~ \left( n\nbar ~-~ 1/N \right )
 			\Bigl\{ \phi_1 ( f + ( N-1 ) f_N ) ~-~ \phi_2 ( f - f_N) \Bigr\}
 		\left. \rgr\, \zeta_R
 		\\
@@ -1113,14 +1115,13 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	One can re-write \eqref{str_ntwot} in a little more efficient way by absorbing the spinor indices $ R $, $ L $,
 \begin{align}
 %
-\label{str_ntwot_cct}
-\mc{S}_{\rm 1+1}^{\rm (2,2)}  ~~=~~ 
+\label{ntwocp}
+\mc{S}_{\rm 1+1}^{\rm (2,2)}  ~~=~~ &
 	\int  d^2x
 	\Biggl\lgroup\; 
-	&
 		2\pi\xi \lgr \frac{1}{2} \left(\p_k \vec{x}_0 \right)^2
 				~+~ \frac{1}{2} \, i\, \ov{\zeta\,\slashed{\p}} \, \zeta
-			\rgr \\
+			\rgr ~+~ \\
 %
 \notag
 	~~+~~  
@@ -1132,7 +1133,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	\rgr
 	\Biggr\rgroup~.
 \end{align}
-	We have explicated the CP($N-1$) indices in the last term in \eqref{str_ntwot_cct} to avoid ambiguity.
+	We have explicated the CP($N-1$) indices in the last term in \eqref{ntwocp} to avoid ambiguity.
 
 	The orientational sector of this theory possesses the following \ntwot supersymmetry
 \begin{align}
@@ -1193,7 +1194,7 @@ As argued in Ref.~\cite{Edalati}, and confirmed in \cite{SYhet} for SU(2) theory
 the worldsheet model is actually \CPC rather than just CP($N-1$), by the reason
 that the latter does not admit \ntwoo generalizations. 
 The extra factor of $C$ comes from the mixing of the orientational and translational degrees of
-freedom, which did not interact in the \ntwot theory \eqref{str_ntwot_cct}.
+freedom, which did not interact in the \ntwot theory \eqref{ntwocp}.
 
 	In the language of two-dimensional superfields, it was discovered in \cite{Edalati} that
 the deformation of the \ntwot theory consists of adding 2-dimensional superpotential
@@ -1219,9 +1220,8 @@ mixing can be presented as
 	We start with presenting first the gauge formulation of the \CPC theory,
 \begin{align*}
 %
-	S_{1+1}^{(0,2)}  ~~=~~ \int d^2 x 
+	& S_{1+1}^{(0,2)} ~~=~~ \int d^2 x 
 \Biggl \lgroup
-&
 	2\pi\xi \lgr \frac 1 2 \left (\p x_0\right)^2 ~+~
 		      \frac 1 2 \ov{\zeta}{}_L\, i\p_R\, \zeta_L ~+~
 			\frac 1 2 \ov {\zeta}{}_R\, i\p_L\, \zeta_R
@@ -1229,28 +1229,38 @@ mixing can be presented as
 	~+~ \\
 %
 &
+	\;\;
+	~+~
 	2\beta \left| \nabla n \right|^2 ~+~ \frac{1}{4e^2} F_{kl}^2
 			~+~ \frac{1}{2e^2} \left|\p \sigma\right|^2 ~+~
 	4\beta\, |\sigma|^2\, |n|^2 ~+~
 	2\, e^2\beta^2 \left( |n|^2 ~-~ 1 \right)^2 ~+~\\
 %
 &
+	\;\;
+	~+~
 	\frac{1}{e^2} \ov{\lambda}{}_R\, i\p_L \lambda_R ~+~
 	\frac{1}{e^2} \ov{\lambda}{}_L\, i\p_R \lambda_L ~+~
 	2\beta\, \ov{\xi}{}_R\, i\nabla_L\, \xi_R ~+~
 	2\beta\, \ov{\xi}{}_L\, i\nabla_R\, \xi_L ~+~ \\
 %
 &
+	\;\;
+	~+~
 	i\,\sqrt{2}\,2\beta \lgr \sigma\, \ov{\xi}{}_R\xi_L ~+~ 
 				\ov{\sigma}\,\ov{\xi}{}_L\xi_R \rgr ~+~ \\
 %
 &
+	\;\;
+	~+~
 	i\,\sqrt{2}\,2\beta 
 		\lgr \ov{n} \left( \lambda_R \xi_L ~-~ \lambda_L\xi_R \right)
 		~-~ \left( \ov{\xi_L\lambda}{}_R ~-~ \ov{\xi_R\lambda}{}_L \right) n \rgr 
 	~+~\\
 %
 &	
+	\;\;
+	~+~
 	2\beta\,
 	\lgr 4 \left | \frac{\p \mc{W}_{1+1}}{\p\sigma} \right |^2 
 		~+~ i\, m_W \ov{\lambda}_L \frac{\p^2 \mc{W}_{1+1}}{\p \sigma^2} \zeta_R 
@@ -1282,17 +1292,16 @@ mixing can be presented as
 \begin{align}
 %
 \notag
-S_{1+1}^{(0,2)} ~~=~~
+S_{1+1}^{(0,2)} ~~=&~~
 	\int d^2 x 
 \Biggl\lgroup
-&
 	2\pi\xi \lgr \frac 1 2 \left (\p x_0\right)^2 ~+~
 		      \frac 1 2 \bzl\, i\p_R\, \zl ~+~
 			\frac 1 2 \bzr\, i\p_L\, \zr
 		\rgr
 	~+~ \\
 %
-\label{world02_unnorm}
+\label{02_unnorm}
 &
 	2\beta\, \Bigg\{
 	\left|\p n\right|^2 ~+~ \left(\ov{n}\p_k n\right)^2 ~+~
@@ -1328,7 +1337,7 @@ S_{1+1}^{(0,2)} ~~=~~
 	While removing the unpleasant right-hand side in the CP($N-1$) constraints, the
 	substitution \eqref{shift} introduces interaction between the superorientational
 	and supertranslational moduli, {\it e.g.} the so-called ``bifermionic mixing term''
-	in the fourth line of Eq.~\eqref{world02_unnorm}.
+	in the fourth line of Eq.~\eqref{02_unnorm}.
 	The latter is most explicit to see if one re-scales the translational variables
 \[
 	\zr ~~=~~ \frac {\zr'}  {{m_W}/{2}}~, \qquad etc~
@@ -1339,8 +1348,7 @@ S_{1+1}^{(0,2)} ~~=~~
 %
 \notag
 S_{1+1}^{(0,2)} ~~=~~ 2\beta
-	\int d^2 x 
-	&
+	\int & d^2 x 
 \lgr
 	\bzr\, i\p_L\, \zr ~~+~~ \dots ~~+~~
 %\bzl\, i\p_R\, \zl ~~+~~ \left(\p x_0\right)^2 ~+~
@@ -1349,6 +1357,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 %
 \label{world02}
 	&
+	\;\;
 	+~~
 	\left|\p n\right|^2 ~~+~~ \left(\ov{n}\p_k n\right)^2 ~~+~~
 	\bxir \, i\p_L \, \xir  ~~+~~ \bxil \, i\p_R \, \xil 
@@ -1357,6 +1366,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 %
 \notag
 	&
+	\;\;
 	-~~
 	i \left(\ov{n}\p_L n\right)\, \bxir \xir ~~-~~ 
 	i \left(\ov{n}\p_R n\right)\, \bxil \xil ~~+~~
@@ -1364,6 +1374,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 %
 \notag
 	&
+	\;\;
 	+~~
 	\gamma\, (i\p_L\nbar) \xir\zr ~~+~~ \ov{\gamma}\, \bxir (i\p_L n) \bzr ~~+~~
 	|\gamma|^2\, \bxil\xil \bzr\zr ~~+~~
@@ -1371,6 +1382,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 %
 \notag
 	&
+	\;\;
 \left.
 	+~~ 
 	\left( 1 \;-\; |\gamma|^2 \right)\, \bxil\xir \bxir\xil  
@@ -1584,7 +1596,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 	see the fourth line in Eq.~\eqref{world02}, which arises from the substitution \eqref{shift}.
 	Had we not done that substitution, our goal would have been finding the quartic fermionic terms,
 	a much more difficult task. 
-	Other than that we know the answer for rest of the effective worldsheet theory, given by Eq.~\eqref{str_ntwot_cct}.
+	Other than that we know the answer for rest of the effective worldsheet theory, given by Eq.~\eqref{ntwocp}.
 	As for the bifermionic term, it arose from the mixing of the kinetic terms of 
 	superorientational and supertranslational moduli, and it is therefore natural to look for the 
 	presence of the former term in the effective theory by using fermionic zero-modes 
@@ -1646,7 +1658,9 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 \notag
 &
 	-\, \p_r \loU ~+~ \frac{i g_1^2}{4\sqrt{2}} 
-			\lgr \poU (\phi_1 + \phi_2) ~+~ (N-1) \poN (\phi_1 - \phi_2) \rgr 
+			\lgr \poU (\phi_1 + \phi_2) ~+~ (N-1) \poN (\phi_1 - \phi_2) \rgr ~+~\\
+\notag
+	&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 				~+~ g_1^2 \sqrt{\frac{N}{2}} \mu_1 \llU    ~~=~~ 0
 	\\
 %
@@ -1654,15 +1668,19 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 &
 	-\, \p_r \llU ~-~ \frac{1}{r}\llU 
 	~+~ \frac{i g_1^2}{4\sqrt{2}} 
-	    \lgr \plU (\phi_1 + \phi_2) ~+~ (N-1) \plN (\phi_1 - \phi_2) \rgr 
+	    \lgr \plU (\phi_1 + \phi_2) ~+~ (N-1) \plN (\phi_1 - \phi_2) \rgr ~+~\\
+\notag
+	&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 	~+~ g_1^2 \sqrt{\frac{N}{2}} \mu_1 \loU ~~=~~ 0
 	\\
 %
-\notag
+\label{lambdaeqs}
 &
 	-\, \p_r \loN ~+~ 
 	\frac{i g_2^2}{2\sqrt{2}}
-		\lgr \poU (\phi_1 - \phi_2) ~+~ \poN ( (N-1) \phi_1 + \phi_2 ) \rgr 
+		\lgr \poU (\phi_1 - \phi_2) ~+~ \poN ( (N-1) \phi_1 + \phi_2 ) \rgr ~+~\\
+\notag
+	&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 	~+~ g_2^2\, \mu_2 \llN ~~=~~ 0
 	\\
 %
@@ -1670,39 +1688,43 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 &
 	-\, \p_r \llN ~-~ \frac{1}{r}\llN
 	~+~ \frac{i g_2^2}{2\sqrt{2}} 
-		\lgr \plU (\phi_1 - \phi_2) ~+~ \plN ( (N-1) \phi_1 + \phi_2 ) \rgr
+		\lgr \plU (\phi_1 - \phi_2) ~+~ \plN ( (N-1) \phi_1 + \phi_2 ) \rgr ~+~\\
+\notag
+	&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
 	~+~ g_2^2\, \mu_2 \loN ~~=~~ 0
-	\\
+\end{align}
+	for the gauginos, and 
+\begin{align}
 %
 \notag
 &
 	\p_r \poU ~+~ \frac{1}{r} \poU ~-~ \frac{1}{Nr}f \poU ~-~ \frac{N-1}{Nr} f_N \poN 
 	~~+~~  \\
 &\notag
-\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad
 	i\, \frac{2\sqrt{2}}{N} 
 		\lgr  \loU (\phi_1 + (N-1)\phi_2) ~+~ \frac{N-1}{N} \loN (\phi_1 - \phi_2) \rgr 
 		~~=~~ 0
 	\\
 %
 &
-\label{N1_strans_eqn}
+\notag
 	\p_r \plU ~-~ \frac{1}{Nr}f \plU ~-~ \frac{N-1}{Nr} f_N \plN 
 	~~+~~ \\
 &\notag
-\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad
 	i\, \frac{2\sqrt{2}}{N}
 		\lgr \llU (\phi_1 + (N-1) \phi_2) ~+~ \frac{N-1}{N} \llN (\phi_1 - \phi_2) \rgr
 		~~=~~ 0
 	\\
 %
 &
-\notag
+\label{psieqs}
 	\p_r \poN ~+~ \frac{1}{r} \poN ~-~ \frac{1}{Nr} (f + (N-2)f_N) \poN ~-~
 			\frac{1}{Nr} f_N \poU 
 	~~+~~ \\
 &\notag
-\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad
 	i\, \frac{2\sqrt{2}}{N} 
 		\lgr \loU (\phi_1 - \phi_2) ~+~ \frac{1}{N} \loN ((N-1)\phi_1 + \phi_2) \rgr
 		~~=~~ 0
@@ -1713,11 +1735,12 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 	\p_r \plN ~-~ \frac{1}{Nr} (f + (N-2)f_N) \plN - \frac{1}{Nr} f_N \plU 
 	~~+~~  \\
 &\notag
-\qquad\qquad\qquad\qquad\qquad\qquad
+\qquad\qquad\qquad
 	i\, \frac{2\sqrt{2}}{N}
 		\lgr \llU (\phi_1 - \phi_2) ~+~ \frac{1}{N} \llN ((N-1)\phi_1 + \phi_2) \rgr
-		~~=~~ 0~.
+		~~=~~ 0~
 \end{align}
+	for the quarks.
 	These equations are easy to solve in either small $ \mu $ or large $ \mu $ limit.
 
 	We now guess a similar {\it ansatz} for the right-handed superorientational modes, where it
@@ -1750,7 +1773,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 		~+~ i\,\frac{g_2^2}{\sqrt{2}}\phi_1\, \psi_+ ~+~ \mu_2 g_2^2\, \lambda_-  ~~=~~ 0
 	\\
 %
-\label{N1_sorient_eqn}
+\label{fermeqs}
 &
 	\p_r \psi_- ~+~ \frac{1}{r}\, \psi_- ~-~ \frac{1}{Nr}(f + (N-1)f_N)\, \psi_- 
 							~+~ i\,\sqrt{2}\phi_2\, \lambda_- ~~=~~ 0
@@ -1800,9 +1823,9 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	\poN & ~~=~~ \frac{4\sqrt{2}}{N^2 r} \lgr \phi_1\, (f + (N-1) f_N) ~-~ \phi_2\, (f-f_N) \rgr ~+~ O(\mu^2)
 	~.
 \end{align}
-	Inspecting Eqs.~\eqref{N1_strans_eqn} and dropping terms proportional to $ O(\mu^2) $ one immediately observes that 
-	the first-order profiles obey similar differential equations to those of the zero-order profiles, and thus are 
-	proportional to the latter
+	Inspecting Eqs.~\eqref{lambdaeqs}, \eqref{psieqs} and dropping terms proportional to $ O(\mu^2) $ one 
+	immediately observes that the first-order profiles obey similar differential equations to those of the zero-order 
+	profiles, and thus are proportional to the latter
 \begin{align}
 %
 \notag
@@ -1844,7 +1867,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	One obvious remark is that at large $ \mu $ the adjoint fields become heavy,
 	and effectively stop propagating.
 	In terms of the profile functions it means that the kinetic terms for $ \lambda^2 $'s 
-	can be dropped from equations \eqref{N1_strans_eqn} and \eqref{N1_sorient_eqn}.
+	can be dropped from equations \eqref{lambdaeqs} and \eqref{fermeqs}.
 	Then $ \lambda^2 $ can be resolved and completely excluded from the equations.
 	
 	Another argument is that we are only interested in the long-distance behaviour
@@ -1853,7 +1876,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	At large distance the string profile functions are very close to their asymptotic values \eqref{boundary},
 	which will allow us to significantly simplify the equations.
 	In particular, the gauge profile functions vanish at infinity.
-	On the other hand, {\it e.g.} in Eqs.~\eqref{N1_strans_eqn}, it is functions $ f $ and $ f_N $ 
+	On the other hand, {\it e.g.} in Eqs.~\eqref{psieqs}, it is functions $ f $ and $ f_N $ 
 	which bind the Abelian and non-Abelian profile functions together.
 	With $ f $ and $ f_N $ neglected ({\it c.f.} Eq.~\eqref{boundary}), this binding is lost and 
 	the solutions will turn out to be independently normalized.
@@ -1866,36 +1889,39 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Supertranslational zero-modes}
 	{\flushleft{\it Large-$r$ domain: $ r \gg 1/(g\sqrt{\xi}) $}.}\\
-	Dropping the kinetic terms for $ \lambda $'s in \eqref{N1_strans_eqn} and setting the string
+	Dropping the kinetic terms for $ \lambda $'s in \eqref{lambdaeqs} and setting the string
 	profiles $ \phi_1 $, $ \phi_2 $, $ f $ and $ f_N $ to their asymptotic values, one has
+	from Eqs.~\eqref{lambdaeqs}, \eqref{psieqs}
 \begin{align}
 %
 \notag
 & 
-	\frac{i}{2\sqrt{2}} \sqrt{\xi} \poU ~+~ \mu_1 \sqrt{\frac{N}{2}}\, \llU ~~=~~ 0   
+	\frac{i}{2\sqrt{2}} \sqrt{\xi} \poU ~+~ \mu_1 \sqrt{\frac{N}{2}}\, \llU ~=~ 0\,,   
 &&
-	\p_r \,\poU ~+~ \frac{1}{r}\,\poU ~+~ i\, 2\sqrt{2}\sqrt{\xi}\, \loU ~~=~~ 0 
+	\p_r \,\poU ~+~ \frac{1}{r}\,\poU ~+~ i\, 2\sqrt{2}\sqrt{\xi}\, \loU ~=~ 0 
 \\
 %
 \notag
 & 
-	\frac{i}{2\sqrt{2}} \sqrt{\xi} \plU ~+~ \mu_1 \sqrt{\frac{N}{2}}\, \loU ~~=~~ 0   
+	\frac{i}{2\sqrt{2}} \sqrt{\xi} \plU ~+~ \mu_1 \sqrt{\frac{N}{2}}\, \loU ~=~ 0\,,      
 &&
 	\p_r \, \plU ~+~ i\,2\sqrt{2}\sqrt{\xi}\,\llU ~~=~~ 0
 \\
 %
-\label{N1_strans_red}
+\label{strans_red}
 &
-	\frac{i}{2\sqrt{2}} N\sqrt{\xi} \poN ~+~ \mu_2 \llN ~~=~~ 0  
+	\frac{i}{2\sqrt{2}} N\sqrt{\xi} \poN ~+~ \mu_2 \llN ~=~ 0\,,     
 &&
-	\p_r \,\poN ~+~ \frac{1}{r}\, \poN ~+~ i\,\frac{2\sqrt{2}}{N} \sqrt{\xi}\, \loN ~~=~~ 0\,
+	\p_r \,\poN ~+~ \frac{1}{r}\, \poN ~+~ \\
+\notag &&& \qquad\qquad
+	~+~ i\,\frac{2\sqrt{2}}{N} \sqrt{\xi}\, \loN ~=~ 0\,
 \\
 %
 \notag
 &
-	\frac{i}{2\sqrt{2}} N\sqrt{\xi} \plN ~+~ \mu_2 \loN ~~=~~ 0
+	\frac{i}{2\sqrt{2}} N\sqrt{\xi} \plN ~+~ \mu_2 \loN ~=~ 0\,,   
 &&
-	\p_r \,\plN ~+~ i\,\frac{2\sqrt{2}}{N}\sqrt{\xi} \llN ~~=~~ 0~.
+	\p_r \,\plN ~+~ i\,\frac{2\sqrt{2}}{N}\sqrt{\xi} \llN ~=~ 0~.
 \end{align}
 	Keeping the notations for the light masses 
 \[
@@ -1905,24 +1931,25 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 \begin{align}
 %
 \notag
-	\loU & ~~=~~ -\, \frac{i}{2\sqrt{2}}\, \frac{2}{N}\, \frac{\mUm}{\sqrt{\xi}}\, \plU 
+	\loU & ~=~ -\, \frac{i}{2\sqrt{2}}\, \frac{2}{N}\, \frac{\mUm}{\sqrt{\xi}}\, \plU 
 &
-	\llU & ~~=~~ -\, \frac{i}{2\sqrt{2}}\, \frac{2}{N}\, \frac{\mUm}{\sqrt{\xi}}\, \poU \\
+	\llU & ~=~ -\, \frac{i}{2\sqrt{2}}\, \frac{2}{N}\, \frac{\mUm}{\sqrt{\xi}}\, \poU \\
 %
 \label{heavy_gauginos}
-	\loN & ~~=~~ -\, \frac{i}{2\sqrt{2}}\, N\, \frac{\mNm}{\sqrt{\xi}}\, \plN
+	\loN & ~=~ -\, \frac{i}{2\sqrt{2}}\, N\, \frac{\mNm}{\sqrt{\xi}}\, \plN
 &
-	\llN & ~~=~~ -\, \frac{i}{2\sqrt{2}}\, N\, \frac{\mNm}{\sqrt{\xi}}\, \poN ~,
+	\llN & ~=~ -\, \frac{i}{2\sqrt{2}}\, N\, \frac{\mNm}{\sqrt{\xi}}\, \poN ~,
 \end{align}
-	and substitute them back into \eqref{N1_strans_red},
+	and substitute them back into \eqref{strans_red},
 \begin{align*}
 %
-	& \p_r\, \plU ~+~ \frac{2}{N}\,\mUm\,\poU ~~=~~ 0
-	&& \p_r\, \plN ~+~ \mNm\,\poN ~~=~~ 0
-\\
+	& \p_r\, \plU ~+~ \frac{2}{N}\,\mUm\,\poU ~~=~~ 0 \\
 %
-	& \p_r\, \poU ~+~ \frac{1}{r}\,\poU ~+~ \frac{2}{N}\,\mUm\,\plU ~~=~~ 0
-	&& \p_r\, \poN ~+~ \frac{1}{r}\,\poN ~+~ \mNm\,\plN ~~=~~ 0~.
+	& \p_r\, \poU ~+~ \frac{1}{r}\,\poU ~+~ \frac{2}{N}\,\mUm\,\plU ~~=~~ 0 \\
+%
+	& \p_r\, \plN ~+~ \mNm\,\poN ~~=~~ 0 \\
+%
+	& \p_r\, \poN ~+~ \frac{1}{r}\,\poN ~+~ \mNm\,\plN ~~=~~ 0~.
 %
 \end{align*}
 	From these, one obtains the second-order equations for $ \plU $ and $ \plN $:
@@ -1937,14 +1964,14 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	The solutions are given by the McDonald function $ K_0(r) $:
 \begin{align*}
 %
-	\plU & ~~=~~ \frac{2}{N}\,C\,\mUm\,\sqrt{\xi}\;K_0\left(\frac{2}{N}\mUm\,r\right)  
+	\plU & ~=~ \frac{2}{N}\,C\,\mUm\,\sqrt{\xi}\;K_0\left(\frac{2}{N}\mUm\,r\right)  
 &
-	\poU & ~~=~~ -\,C\sqrt{\xi}\; \p_r K_0\left(\frac{2}{N}\mUm\,r\right)
+	\poU & ~=~ -\,C\sqrt{\xi}\; \p_r K_0\left(\frac{2}{N}\mUm\,r\right)
 \\
 %
-	\plN & ~~=~~ C\,\mNm\,\sqrt{\xi}\; K_0\left(\mNm\, r\right)
+	\plN & ~=~ C\,\mNm\,\sqrt{\xi}\; K_0\left(\mNm\, r\right)
 &
-	\poN & ~~=~~ -\,C\sqrt{\xi}\; \p_r K_0\left(\mNm\,r\right)~,
+	\poN & ~=~ -\,C\sqrt{\xi}\; \p_r K_0\left(\mNm\,r\right)\,,
 \end{align*}
 	with an arbitrary constant $ C $.
 	At larger $ r $, but still in the region where $ K_0 $ does not fall off exponentially,
@@ -1971,12 +1998,12 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	This seems to be more general than the large-$ r $ case.
 	To be able to solve the Dirac equations, all we can do is send $ \mu $ to be very big.
 	The gaugino functions $ \lambda $ can still be resolved from {\it e.g.} the first and the
-	third equations in \eqref{N1_strans_eqn}.
+	third equations in \eqref{lambdaeqs}.
 	However, effectively one can discard them.
 	Indeed, Eqns.~\eqref{heavy_gauginos} suggest that $ \lambda_0 $'s must be suppressed as $ O(1/\mu) $
 	with respect to $ \psi_1 $ and as $ O(1/\mu^2) $ with respect to $ \psi_0 $, which we temporarily
 	accept to be finite at $ 1/\mu \to 0 $.
-	Assuming this, and taking the fifth and seventh equations in \eqref{N1_strans_eqn}, one observes
+	Assuming this, and taking the first and third equations in \eqref{psieqs}, one observes
 	that to the leading order in $ 1/\mu $ the gaugino contributions can be dropped.
 
 	Taking the sum and the difference of those equation, one arrives at
@@ -2018,7 +2045,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Superorientational zero-modes}
 	We deal in a similar fashion with the superorientational modes.
-	Resolving the gauginos from the first and the third equations of \eqref{N1_sorient_eqn},
+	Resolving the gauginos from the first and the third equations of \eqref{fermeqs},
 \begin{align}
 %
 \notag
@@ -2027,7 +2054,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 \notag
 	\lambda_- & ~~=~~ \frac{i}{\sqrt{2}\phi_2} \lgr \p_r \psi_- ~+~ \frac{1}{r} \psi_- ~-~ \frac{1}{Nr}(f + (N-1)f_N)\psi_- \rgr
 \end{align}
-	and substituting them into the rest two equations in \eqref{N1_sorient_eqn}, while dropping 
+	and substituting them into the rest two equations in \eqref{fermeqs}, while dropping 
 	the kinetic terms, one obtains
 \begin{align}
 %
@@ -2120,7 +2147,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	The anticipated result is the kinetic part of the effective sigma model, with the following structure
 \begin{align}
 %
-\notag
+\label{world_unnorm}
 	S_{\rm 1+1}^{CP(N-1)} ~~=~~  \int d^2x 
 	\Biggl\lgroup\; 
 	&
@@ -2130,7 +2157,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 			\rgr
 	\\
 %
-\label{world_unnorm}
+\notag
 	~~+~~  
 	&\;
 	2\beta \lgr \left|\p_k n \right|^2  ~+~ \left(\ov{n}\p_k n\right)^2  
@@ -2167,19 +2194,26 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	\times
 	\\
 %
-\label{biferm_general}
+\notag
 	&
 	\times
 	\int r\, dr 
-	\biggl\lgroup  ( \rho(r)-1 ) \left( \loN \lambda_-   ~+~   \llN \lambda_+ \right) ~+~
+	\biggl\lgroup  ( \rho(r)-1 ) \left( \loN \lambda_-   ~+~   \llN \lambda_+ \right) ~+~ \\
+%
+\label{biferm_general}
+	&
+	\qquad\qquad~~
 	g_2^2 \frac{N}{4} \left( \poN \psi_-   ~+~   \plN \psi_+ \right)  ~+~
 	\\
 %
 \notag
 	&
 	\qquad\qquad~~
-	g_2^2 \frac{\rho(r)}{4} \Bigl\{ \left(\poU ~-~ \poN\right) \psi_- ~-~
-	     		         	\left(\plU ~+~ (N-1)\plN\right) \psi_+ \Bigr\} 
+	g_2^2 \frac{\rho(r)}{4} \Bigl\{ \left(\poU ~-~ \poN\right) \psi_- ~-~ \\
+\notag
+	&
+	\qquad\qquad\qquad\;\;
+	     		         	-~ \left(\plU ~+~ (N-1)\plN\right) \psi_+ \Bigr\} 
 	\biggr\rgroup~.
 \end{align}
 	We can handle this expression in the limits of small or large $ \mu $.
@@ -2191,22 +2225,22 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	and substitute the profile functions \eqref{tzeroorder}-\eqref{firstorder} into Eq.~\eqref{biferm_general},
 \begin{align}
 %
-\notag
+\label{biferm_small}
 	&
 	\frac{2\pi}{g_2^2} \times  
 	4 \lgr  i\p_L \ov{n}\, \xi_R \, \zeta_R  ~+~  \ov{\xi}{}_R \, i \p_L n\, \ov{\zeta}{}_R \rgr
 	\times
 	\\
 %
-\label{biferm_small}
+\notag
 	&
-	\times
+%	\times
 	\left( -\, \frac{\mu_2 g_2^2}{2\sqrt{2}} \right)
-	\int r\, dr \,
+	\int r dr 
 	\lgr  \frac{g_2^2(\phi_1^2 - \phi_2^2)^2}{\phi_2^2} 
-			\left( 1 ~+~ \frac{1}{N} f ~+~ \frac{2N - 1}{N}f_N \right) 
-			~+~
-		4 g_2^2 (\phi_1^2 ~-~ \phi_2^2) f_N \rgr~,
+			\left( 1 \;+\; \frac{1}{N} f \;+\; \frac{2N - 1}{N}f_N \right) 
+			\;+\;
+		4 g_2^2 (\phi_1^2 \;-\; \phi_2^2) f_N \rgr,
 \end{align}
 	to the first order in $ \mu $.
 	Since the normalization constants of the right-handed modes $ I_\zeta $, $ I_\xi $ do not
@@ -2224,32 +2258,32 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 \begin{align}
 %
 \notag
-	I_\zeta & ~~=~~ \frac{N}{2\xi} 
-		\int r\, dr 
-			\lgr \left(\poU\right)^2 ~+~ \left(\plU\right)^2 ~+~ 
-				(N-1)\left\{\left(\poN\right)^2 ~+~
+	I_\zeta & ~=~ \frac{N}{2\xi} 
+		\int r dr 
+			\lgr \left(\poU\right)^2 \;+\; \left(\plU\right)^2 \;+\; 
+				(N-1)\left\{\left(\poN\right)^2 \;+\;
 				            \left(\plN\right)^2 \right\} 
-			\rgr~, \\
+			\rgr \!, \\
 %
-\label{norm_int}
-	I_\xi & ~~=~~ 2g_2^2\, 
-		\int r\, dr \lgr  \psi_+^2 ~+~ \psi_-^2 \rgr~, \\
+\label{normint}
+	I_\xi & ~=~ 2g_2^2\, 
+		\int r dr \lgr  \psi_+^2 \;+\; \psi_-^2 \rgr\!, \\
 %
 \notag
-	I_{\zeta\xi} & ~~=~~
+	I_{\zeta\xi} & ~=~
 		\frac{N}{2}\, g_2^2\, 
-		\int r\, dr \lgr \poN\, \psi_- ~+~ \plN\, \psi_+ \rgr ,
+		\int r dr \lgr \poN\, \psi_- \;+\; \plN\, \psi_+ \rgr \!,
 \end{align}
 	where we also have omitted the gauge field contribution from \eqref{biferm_general} since it would not
 	produce large logarithms which we are after. 
 
-	We substitute the long-range tails \eqref{tail_strans} and \eqref{tail_sorient} into \eqref{norm_int},
+	We substitute the long-range tails \eqref{tail_strans} and \eqref{tail_sorient} into \eqref{normint},
 \begin{align}
 %
 \notag
 	I_\zeta & ~~=~~ 2\, \ln \frac{m_W}{m_L} ~+~ O(1)~, \\
 %
-\label{norm_int_eval}
+\label{logs}
 	I_\xi & ~~=~~ 2\,g_2^2 \, \ln \frac{m_W}{m_L} ~+~ O(1)~, \\
 %
 \notag
@@ -2264,20 +2298,22 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	Normalizing the fields $ \xi $ and $ \zeta $ canonically (modulo the factor of $ 2\beta $, 
 	{\it c.f.} Eq.~\eqref{world02}) and comparing the resultant $ I_{\zeta\xi} $ with \eqref{world02},
 	one has
-\[
+\beq
+\label{gammaresult}
 %	-\, 
 	\gamma ~~=~~ 
 %	-\, 
 		\frac { \sqrt{2}\,\delta } { \sqrt{ 1 + 2 | \delta |^2 } } 
 		~~=~~ 1 ~~+~~ O\left(\frac{1}{\ln\left(\frac{g_2^2\mu}{m_W}\right)}\right)~.
-\]
+\eeq
 	This leads to the result
-\[
+\beq
+\label{deltaresult}
 	\delta~~=~~ 
 %-\, 
 	{\rm const} \cdot \sqrt{\ln\, \frac{g_2^2\mu}{m_W}}~,
 	\qquad\qquad \text{as $\mu ~\to~ \infty$}~.
-\]
+\eeq
 	
 	The latter shows the non-linear dependence of the worldsheet deformation $ \delta $ on the 
 	supersymmetry breaking parameter $ \mu $, independently of the number of colours $ N $.
