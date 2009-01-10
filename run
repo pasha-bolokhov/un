@@ -1,0 +1,25 @@
+#
+#
+#
+SRC=$1
+
+# some clean-up first
+#  rm -f ${SRC}.dvi
+#  rm -f feynmanpics.*
+
+#  latex ${SRC}.tex 
+
+#  DISPLAY= mf feynmanpics.mf 
+
+#  latex ${SRC}.tex
+
+# temporary comment out bibtex;  restore it later!!
+  export TEXINPUTS=${TEXINPUTS}:$HOME/progs/revtex4
+  export BSTINPUTS=$TEXINPUTS
+if [ "$1" = "bib" ]; then
+  latex ${SRC}.tex && bibtex ${SRC} &&
+  latex ${SRC}.tex && latex ${SRC}.tex && dvips -o ${SRC}.ps ${SRC}.dvi 
+else
+  latex ${SRC}.tex && latex ${SRC}.tex && dvips -o ${SRC}.ps ${SRC}.dvi 
+fi  # && gv ${SRC}.ps
+
