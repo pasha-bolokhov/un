@@ -153,7 +153,8 @@
 \setcounter{equation}{0}
 
 In this section we introduce the theory in the bulk, and review its perturbative mass spectrum.
-The starting theory is $\mc{N}=2$ SQCD with the gauge group \sunun, which then is softly broken to $ \mc{N}=1 $. 
+The starting theory is $\mc{N}=2$ SQCD with the gauge group \sunun.
+%which then is softly broken to $ \mc{N}=1 $. 
 Its matter sector consists of $ N_f = N $ flavours of quark hypermultiplets,
 both in fundamental and in antifundamental representations, as necessary for $ \mc{N}=2 $ supersymmetry.
 For string solutions to exist, we add a Fayet-Iliopoulos $D$-term, which causes quark
@@ -181,7 +182,8 @@ The masses $ \mu_1 $ and $ \mu_2 $ lift the adjoints above their gauge superpart
 supersymmetry.
 Although the parameters $ \mu_1 $ and $ \mu_2 $ are generically different, we will later assume that
 they are connected by a particular relation.
-The latter is of course not essential, as our goal is the limit $ \mu_1$, $\mu_2$ $\to$ $\infty$.
+The latter is of course not essential, as our goal is the limit of very large $ \mu_1$ and $\mu_2$. 
+%$ \mu_1$, $\mu_2$ $\to$ $\infty$.
 
 The theory broken by \eqref{none} admits 1/2 BPS-saturated vortex solutions, if the mass parameters
 are set to zero \cite{SYrev,SYnone,Edalati},
@@ -455,7 +457,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	Obviously, this is fulfilled with our choice of quark masses \eqref{qmasses} and superpotential
 	\eqref{none}.
 	The bosonic part of the string solution is then the same as in \ntwon, and hence we 
-	describe it now.
+	refer to it now.
 
 	We take the {\it ansatz} where half of the quark fields vanish, together with the adjoint matter
 \begin{align*}
@@ -562,7 +564,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	The solution \eqref{string_reg} breaks \cfl down to SU($N-1$)$\times$U(1). 
 	That means that the string acquires orientational moduli living in 
 \beq
-\label{global_breaking_str}
+\label{modulispace}
 	\frac{\text{SU($N$)}}
             {\text{SU($N-1$)} \times {\rm U(1)}}         ~~\sim~~  \text{CP($N-1$)}~
 \eeq
@@ -605,7 +607,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	Here $ U $ is a unitary colour-flavour rotation matrix from \cfl\hspace{-1ex}.	
 	Since a string solution breaks \cfl\hspace{-1ex}, the effective two-dimensional theory on the
 	string is described by a CP($N-1$) theory of orientational moduli, 
-	see Eq.~\eqref{global_breaking_str}.
+	see Eq.~\eqref{modulispace}.
 	It is convenient to describe this theory in terms of less ``ambiguous'' orientational variables $n^l$, which are
 	related to the rotation matrix $ U $ in \eqref{nastr} as
 \beq
@@ -728,7 +730,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	In \ntwo theory, the lightest modes are the zero-modes. 
 	The effective action on the string can be built by calculating the so-called overlap of the zero-modes 
 	by substituting them into the theory \eqref{theory}, similar to how \eqref{cp} was obtained.
-	Now however we are more interested in the fermionic zero-modes, since it is the latter which
+	Now however we are more interested in the fermionic zero-modes, since it is the latter that
 	are modified in the presence of (\ntwon)-breaking superpotential \eqref{none}.
 
 	Our string solution  is 1/2-BPS, that is, half of the supercharges vanish when acting on the solution.
@@ -812,7 +814,6 @@ The potential is given by a sum of $ D $ and $ F $ terms
 	This follows from the fact that the fermionic and bosonic modes are related to each other, 
 	see Eq.~\eqref{bos_ferm_rel}.
 	In the bulk, the supersymmetry transformations are
-{\\ \it the order of indices at $ \tau^m $ here needs to be checked..}
 \begin{align}
 %
 \notag
@@ -940,7 +941,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 			0 &
 			    \frac{\displaystyle x^1 + i\, x^2}{\displaystyle r^2}\cdot 
 				\p_R (n\nbar)\, n\nbar\cdot \epsilon^{12}
-	     \end{matrix} \rgr^{f\alpha}~,
+	     \end{matrix} \rgr^{f\alpha},
 \end{align*}	
 	where
 \[	
@@ -1060,7 +1061,7 @@ The potential is given by a sum of $ D $ and $ F $ terms
 					~+~  \frac{1}{2} \ov{\zeta}{}_R\, i\p_L \zeta_R
 				       \rgr~,
 \]
-	with the fermions properly normalized.
+	after properly normalizing the fermions.
 
 	The non-Abelian nature of the string dynamics is contained in the orientational sector of the worldsheet theory.
 	Eq.~\eqref{cp} shows the bosonic part of this sector. 
@@ -1279,7 +1280,7 @@ mixing can be presented as
 	\nbar{}_l\, \xi_L^l ~~=~~ 0\,, \qquad\qquad  
 	\ov{\xi}{}_{lR}\, n^l ~~=~~ \delta\, \frac{m_W}{\sqrt{2}}\, \zeta_R~.
 \]
-	For practicle reasons, however, it is convenient to restore CP($N-1$) constraints by sending
+	For practical reasons, however, it is convenient to restore CP($N-1$) constraints by sending
 \begin{align}
 %
 \notag
@@ -1593,14 +1594,15 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 	which helps in finding the effective worldsheet theory on the string. 
 	At the technical level, we got convinced in the previous section that the difference
 	between the \ntwoo and \ntwot theories is most evidently exemplified by the bifermionic cross-term,
-	see the fourth line in Eq.~\eqref{world02}, which arises from the substitution \eqref{shift}.
-	Had we not done that substitution, our goal would have been finding the quartic fermionic terms,
-	a much more difficult task. 
-	Other than that we know the answer for rest of the effective worldsheet theory, given by Eq.~\eqref{ntwocp}.
+	see the fourth line in Eq.~\eqref{world02}.
+	Apart from that term and some quartic terms proportional to $|\gamma|^2$, the answer for effective worldsheet 
+	theory is given by Eq.~\eqref{ntwocp}.
 	As for the bifermionic term, it arose from the mixing of the kinetic terms of 
-	superorientational and supertranslational moduli, and it is therefore natural to look for the 
-	presence of the former term in the effective theory by using fermionic zero-modes 
+	superorientational and supertranslational moduli via substitution \eqref{shift}, and it is therefore 
+	natural to look for the presence of the former term in the effective theory by using fermionic zero-modes 
 	in the kinetic part of the microscopic theory. 
+	Had we not done the substitution \eqref{shift}, our goal would have been finding the quartic fermionic terms,
+	a much more difficult task. 
 
 	One difficulty here is that the theory on the string possesses the light modes with masses \eqref{mUm}, \eqref{mNm},
 	which become massless in the $ \mu \to \infty $ limit.
@@ -1649,7 +1651,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 	This interpretation, however, is only valid for very small $ \mu $, when, as we will see, the deformations
 	are indeed directly proportional to $ \mu $.
 	At large $ \mu $, the ``1''-profiles become large and lose their meaning as deformations, accompanied by the fact that 
-	the ``0''-profiles will no longer be given by \ntwo \eqref{N2_strans}.
+	the ``0''-profiles will no longer be given by \ntwo Eqs.~\eqref{N2_strans}.
 
 	We substitute now the {\it ansatz} \eqref{ftprofile} into the Dirac equations \eqref{dirac} to obtain the 
 	equations for the profiles:
@@ -2100,7 +2102,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 \[
 	\psi_+ ~~=~~ c_1 \phi_2 \qquad\qquad	\psi_- ~~=~~ c_2 \frac{\phi_1}{r}~.
 \]
-	Niether of $ c_1 $ and $ c_2 $ have to vanish now.
+	Neither of $ c_1 $ and $ c_2 $ have to vanish now.
 	On the other hand we know from the analysis at large $ r $ that there cannot be two independent
 	constants.
 	In fact, since we have fixed the normalization of the zero-modes at large $ r $, Eq.~\eqref{sorient_K}, 
@@ -2183,7 +2185,7 @@ from \ntwo zero-modes, Eq.~\eqref{N2_strans}:
 	The strength of the bifermionic coupling $ I_{\zeta\xi} $ is of our interest.
 	In \eqref{world_unnorm} we have implicitly assumed that $ \mu $ is real, and therefore
 	the induced $ \gamma $ is also expected to be real.
-	Using the zero-mode {\it ans\"{a}tze} \eqref{ftprofile} and \eqref{fprofile} we calculate this coupling,
+	Using the zero-mode expressions \eqref{ftprofile} and \eqref{fprofile} we calculate this coupling,
 \begin{align}
 %
 \notag
