@@ -369,7 +369,7 @@ The potential is given by the  sum of the $ D $ and $ F $ terms,
 %
 \notag
 	&\qquad\quad ~~+~~
-		2g_2^2\, \Bigl| \wt{q}{}_A\,T^a q_A ~+~ 
+		2g_2^2\, \Bigl| \wt{q}{}_A\,T^a q^A ~+~ 
 			\frac{1}{\sqrt{2}}\, \frac{\p\mc{W}_{\mc{N}=1}}{\p a^a} \Bigr|^2
 	~+~
 	\frac{g_1^2}{2}\, \Bigl| \wt{q}{}_A q^A ~+~ 
@@ -573,7 +573,7 @@ The values of the parameters in \eqref{V} are chosen in such a way that the adjo
 	Obviously, this is fulfilled with our choice of the quark masses \eqref{qmasses} and superpotential
 	\eqref{none}.
 	The bosonic part of the classical string solution is then the same as in \ntwon, and hence can
-	be used `` as is"
+	be used ``as is'';
 	 see  \cite{SYrev} and \cite{SYhet} where this solution
 is found in \none bulk theory for the case of the U(2) gauge group.
 
@@ -600,7 +600,7 @@ is found in \none bulk theory for the case of the U(2) gauge group.
 		~+~
 		 \frac{g_2^2}{2} \left( \ov{\varphi}{}_A\,T^a\varphi^A \right)^2 ~+~
 		 \frac{g_1^2}{8} \left( \ov{\varphi}{}_A\, \varphi^A ~-~ N\,\xi \right)^2
-	\Biggr\}
+	\Biggr\} \,.
 \end{align}
 	The profile solution for the string can be written as \cite{ABEKY}
 \begin{align}
@@ -665,7 +665,7 @@ is found in \none bulk theory for the case of the U(2) gauge group.
 %
 \notag
 	f_{N}(0) & ~~=~~ 1\text,                   & f(0) & ~~=~~ 1\text,   &
-	f_{N}(\infty) & ~~=~~ 0 \text\,            &  f(\infty) & ~~=~~ 0\text.
+	f_{N}(\infty) & ~~=~~ 0 \text,            &  f(\infty) & ~~=~~ 0\text.
 \end{align}
 	Under the latter conditions, the quark profile $ \phi_1(r) $ is required to vanish at the origin, while 
 	$ \phi_2(r) $ is not restricted at $ r = 0 $, and, generally speaking, does not vanish.
@@ -817,7 +817,7 @@ is found in \none bulk theory for the case of the U(2) gauge group.
 	where the coupling constant $ \beta $ is 
 \beq
 \label{beta}
-	\beta ~~=~~ \frac{2\pi}{g_2^2}
+	\beta ~~=~~ \frac{2\pi}{g_2^2}\,.
 \eeq
 	This relation establishes a classical connection for the two- and four-dimensional
 	 coupling constants.
@@ -873,10 +873,10 @@ for the U(1)$ \times $ SU(2) non-Abelian string were found in \cite{SYhet}.
 \begin{align}
 %
 \notag
-\mc{L}_{\rm 4d} & ~~=~~ \frac{2i}{g_2^2} \ov{\lN_f \slashed{\md}} \lambda^{f\text{SU($N$)}}
+\mc{L}_{\rm 4d} & ~~=~~ \frac{2i}{g_2^2} \Tr\, \ov{\lN_f \slashed{\md}} \lambda^{f\text{SU($N$)}}
 		~+~ \frac{4i}{g_1^2} \ov{\lU_f \slashed{\p}} \lambda^{f{\rm U(1)}}
-		~+~ \Tr i\, \ov{\psi \slashed{\md}} \psi  
-		~+~ \Tr i\, \wt{\psi} \slashed{\md} \ov{\wt{\psi}}
+		~+~ \Tr\, i\, \ov{\psi \slashed{\md}} \psi  
+		~+~ \Tr\, i\, \wt{\psi} \slashed{\md} \ov{\wt{\psi}}
 		\\[3mm]
 %
 \notag
@@ -902,9 +902,9 @@ for the U(1)$ \times $ SU(2) non-Abelian string were found in \cite{SYhet}.
 \notag
 		&
 		~+~
-		i\sqrt{2}\, \Tr \wt{\psi} \left( \aU ~+~ \aN \right) \psi  
+		i\sqrt{2}\, \Tr\; \wt{\psi} \left( \aU ~+~ \aN \right) \psi  
 		~+~ 
-		i\sqrt{2}\, \Tr \ov{\psi} \left( \baU ~+~ \baN \right) \ov{\wt{\psi}}
+		i\sqrt{2}\, \Tr\; \ov{\psi} \left( \baU ~+~ \baN \right) \ov{\wt{\psi}}
 		\\[3mm]
 %
 \notag
@@ -920,6 +920,10 @@ for the U(1)$ \times $ SU(2) non-Abelian string were found in \cite{SYhet}.
 		\mu_2 \Tr \lgr \left( \lambda^{2\,\text{SU($N$)}} \right)^2
 			   ~+~ \left( \ov{\lambda}{}^\text{SU($N$)}_2 \right)^2 \rgr\,.
 \end{align}
+	The long bars in this equation indicate that each corresponding variable comes with a bar. 
+	In the case of the derivatives $\overline{\slashed{\partial}}$ the bar signifies that 
+	the derivative is contracted with $\overline{\sigma}{}^\mu_{\dot{\alpha}\alpha} $ rather 
+	than $\sigma_\mu^{\alpha\dot{\alpha}}$.
 	We use the matrix color-flavor notation for fermions; the traces run
 	over the corresponding color-flavor indices.
 	The squark fields are written as SU(2)$_R$ doublets of the \ntwo theory,
@@ -1110,7 +1114,7 @@ As was already mentioned, a direct substitution of the bosonic solution \eqref{s
 	where, however, only the case of equal coupling constants $ g_1 = g_2 $ was considered.
 	In that case one only needs a single quark profile function rather than two $ \phi_1 $ and $ \phi_2 $.
 	In general, even if the \sunu theory is obtained from a broken SU$ (N+1) $, 
-	one is not free to assume the coupling constants to be equal due to their running above $ \sqrt{\xi} $.
+	one is not free to assume the coupling constants to be equal, due to their running above $ \sqrt{\xi} $.
 
 	From the action \eqref{fermact} one finds the Dirac equations which the zero modes should satisfy,
 \begin{align}
@@ -1344,7 +1348,7 @@ mixing can be presented as
 	\;\;
 	~+~
 	2\beta \left| \nabla n \right|^2 ~+~ \frac{1}{4e^2} F_{kl}^2
-			~+~ \frac{1}{2e^2} \left|\p \sigma\right|^2 ~+~
+			~+~ \frac{1}{e^2} \left|\p \sigma\right|^2 ~+~
 	4\beta\, |\sigma|^2\, |n|^2 ~+~
 	2\, e^2\beta^2 \left( |n|^2 ~-~ 1 \right)^2 \\[2mm]
 %
@@ -1396,10 +1400,10 @@ mixing can be presented as
 \begin{align}
 %
 \notag
-	\bxir ~~\to~~ \bxir' ~-~ \frac{m_W}{\sqrt{2}}\, \delta \cdot \zeta_R\ov{n} \,,\\[2mm]
+	\bxir' ~~=~~ \bxir ~-~ \frac{m_W}{\sqrt{2}}\, \delta \cdot \zeta_R\ov{n} \,,\\[2mm]
 %
 \label{shift}
-	\xi_R ~~\to~~ \xi_R' ~-~ \frac{m_W}{\sqrt{2}}\, \ov{\delta} \cdot \bzr n~.
+	\xi_R' ~~=~~ \xi_R ~-~ \frac{m_W}{\sqrt{2}}\, \ov{\delta} \cdot \bzr n~.
 \end{align}
 	With this redefinition, and all auxiliary fields excluded, the sigma model takes the form
 \begin{align}
