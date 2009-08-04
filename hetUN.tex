@@ -133,6 +133,9 @@
 \newcommand{\MN}{M_\text{SU($N$)}}
 \newcommand{\MU}{M_{\rm U(1)}}
 
+\newcommand{\tgamma}{\wt{\gamma}}
+\newcommand{\btgamma}{\ov{\tgamma}}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1492,8 +1495,8 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 	&
 	\;\;
 	+~~
-	\gamma\, (i\p_L\nbar) \xir\zr ~~+~~ \ov{\gamma}\, \bxir (i\p_L n) \bzr ~~+~~
-	|\gamma|^2\, \bxil\xil \bzr\zr  
+	\tgamma\, (i\p_L\nbar) \xir\zr ~~+~~ \ov{\tgamma}\, \bxir (i\p_L n) \bzr ~~+~~
+	|\tgamma|^2\, \bxil\xil \bzr\zr  
 	\\[2mm]
 %
 \notag
@@ -1501,7 +1504,7 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 	\;\;
 \left.
 	+~~ 
-	\left( 1 \;-\; |\gamma|^2 \right)\, \bxil\xir \bxir\xil  
+	\left( 1 \;-\; |\tgamma|^2 \right)\, \bxil\xir \bxir\xil  
 	~~-~~ \bxil\xil \bxir\xir
 \rgr ,
 \end{align}
@@ -1509,9 +1512,14 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 \[
 	\dots ~~=~~ \left(\p x_0\right)^2 ~~+~~ \bzl\, i\p_R\, \zl ~,
 \]
-	and the coefficient $ \gamma $ in front of the bifermionic term is related to the superpotential parameter $ \delta $ via
+	and the coefficient $ \tgamma $ in front of the bifermionic term is related to the superpotential parameter $ \delta $ via
 \[
-	\gamma ~~=~~ \frac { \sqrt{2}\,\delta } { \sqrt{ 1 +  2 |\delta|^2 } }~.
+	\tgamma ~~=~~ \frac { \sqrt{2}\,\delta } { \sqrt{ 1 +  2 |\delta|^2 } }~.
+\]
+	In this paper the heterotic deformation parameter $ \tgamma $ is connected with the analogous parameter
+	$ \gamma $ introduced in \cite{SYhet} by the following relation,
+\[
+	\tgamma ~~=~~ \sqrt{2/\beta}\, \gamma\,.
 \]
 	The theory \eqref{world02} is invariant under the \ntwoo supersymmetry transformations
 \begin{align*}
@@ -1535,20 +1543,20 @@ S_{1+1}^{(0,2)} ~~=~~ 2\beta
 %
 	& 
 	\delta\xir ~~=~~ - \sqrt{2}\, \ov{\epsilon}{}_R \bxil\xir \cdot n 
-		~~-~~ \sqrt{2}\, \ov{\gamma}\epsilon_R\, \xil \bzr \,,\\[2mm]
+		~~-~~ \sqrt{2}\, \ov{\tgamma}\epsilon_R\, \xil \bzr \,,\\[2mm]
 %
 	&
 	\delta\bxir  ~~=~~ \sqrt{2}\, \epsilon_R \bxir \xil \cdot \ov{n} 
-		~~-~~ \sqrt{2}\, \gamma\ov{\epsilon}{}_R\, \bxil\zr \,,\\[2mm]
+		~~-~~ \sqrt{2}\, \tgamma\ov{\epsilon}{}_R\, \bxil\zr \,,\\[2mm]
 %
 	&
-	\delta\zeta_R ~~=~~ -\, \sqrt{2}\, \ov{\gamma}\epsilon_R \cdot \bxir\xil \,,\\[2mm]
+	\delta\zeta_R ~~=~~ -\, \sqrt{2}\, \ov{\tgamma}\epsilon_R \cdot \bxir\xil \,,\\[2mm]
 %
 	&
-	\delta\ov{\zeta}{}_R ~~=~~ \sqrt{2}\, \gamma \ov{\epsilon}{}_R \bxil\xir~,
+	\delta\ov{\zeta}{}_R ~~=~~ \sqrt{2}\, \tgamma \ov{\epsilon}{}_R \bxil\xir~,
 \end{align*}
 	which represent the right-handed half of the \ntwot supersymmetry \eqref{susy_ntwot} 
-	deformed by the parameter $ \gamma $.
+	deformed by the parameter $ \tgamma $.
 	It is straightforward to see that these supertransformations preserve the CP($N-1$) constraints
 \[
 	\ov{n}{}_l n^l ~~=~~ 1~, \qquad\qquad  \ov{n}{}_l\xi_\alpha^l ~~=~~ \ov{\xi}{}_{\alpha l} n^l ~~=~~ 0~,
@@ -1637,10 +1645,16 @@ The Lagrangian of the CP($N-1$) model is given by the following sigma model
 	One then constructs the action 
 \beq
 \label{exte}
-	\mc{L}_{(0,2)} ~~=~~ \int\, d^4\theta\, \lgr K(\Phi,\ov{\Phi}) 
-		~-~ 2\, \ov{\mc{B}}\,\mc{B}  ~+~  \gamma\,\mc{B}\,K  ~+~ \ov{\gamma}\,\ov{\mc{B}}\,\ov{K} \rgr,
+	\mc{L}_{(0,2)} ~~=~~ \frac{2}{g_0^2}\, \int\, d^4\theta\, \lgr K(\Phi,\ov{\Phi}) 
+		~-~ 2\, \ov{\mc{B}}\,\mc{B}  ~+~  \sqrt{2}\,\tgamma\,\mc{B}\,K  
+					     ~+~ \sqrt{2}\,\ov{\tgamma}\,\ov{\mc{B}}\,\ov{K} \rgr,
 \eeq
 	which respects the invariance on the target space CP($N-1$).
+	Here
+\[
+	\frac{2}{g_0^2} ~~=~~ 2\beta
+\]
+	defines the coupling constant of the sigma model.
 	The second term in \eqref{exte} generates the kinetic term for $ \zr $, while the last two terms 
 	are responsible for the mixing between $ \zr $ and $ \xi_{R,L} $.
 	Explicitly, one has,
@@ -1654,14 +1668,14 @@ The Lagrangian of the CP($N-1$) model is given by the following sigma model
 %
 \label{cpn-1g}
 			& 
-			~~+~~ \gamma\, g_{i\bj}\, (i \p_L \ov{\phi}{}^\bj)\, \psi_R^i\, \zr
-			~+~ \ov{\gamma}\, g_{i\bj}\, \ov{\psi}{}_R^\bj (i \p_L \phi^i)\, \bzr
-			~+~ |\gamma|^2\, \bzr\,\zr \cdot ( g_{i\bj}\, \ov{\psi}{}_L^\bj\, \psi_L^i )
+			~~+~~ \tgamma\, g_{i\bj}\, (i \p_L \ov{\phi}{}^\bj)\, \psi_R^i\, \zr
+			~+~ \ov{\tgamma}\, g_{i\bj}\, \ov{\psi}{}_R^\bj (i \p_L \phi^i)\, \bzr
+			~+~ |\tgamma|^2\, \bzr\,\zr \cdot ( g_{i\bj}\, \ov{\psi}{}_L^\bj\, \psi_L^i )
 	\\[2mm]
 %
 \notag
 			& 
-			~~+~~ (1 \!-\! |\gamma|^2)\, (g_{i\bk}\, \ov{\psi}{}_R^\bk\, \psi_L^i)\,
+			~~+~~ (1 \!-\! |\tgamma|^2)\, (g_{i\bk}\, \ov{\psi}{}_R^\bk\, \psi_L^i)\,
 						     (g_{j\bl}\, \ov{\psi}{}_L^\bl\, \psi_R^j)
 			~-~ (g_{i\bk}\, \ov{\psi}{}_R^\bk\, \psi_R^i)\, (g_{j\bl}\, \ov{\psi}{}_L^\bl\, \psi_L^j)~.
 \end{align}
@@ -1708,7 +1722,7 @@ The Lagrangian of the CP($N-1$) model is given by the following sigma model
 	At the technical level, we got convinced in the previous section that the difference
 	between the \ntwoo and \ntwot theories is most evidently exemplified by the bifermionic cross-term,
 	see the fourth line in Eq.~\eqref{world02}.
-	Apart from that term and some quartic terms proportional to $|\gamma|^2$, the answer for effective 
+	Apart from that term and some quartic terms proportional to $|\tgamma|^2$, the answer for effective 
 	world sheet theory is given by Eq.~\eqref{str_ntwot}.
 	As for the bifermionic term, it arose from the mixing of the kinetic terms of 
 	superorientational and supertranslational moduli via substitution \eqref{shift}, and it is therefore 
@@ -2255,7 +2269,7 @@ In this domain we do not put the string profiles to their asymptotic values, but
 \[
 	\mathcal{W}_{1+1} ~~=~~ \frac{1}{2}\,\delta\,\Sigma^2~,
 	\qquad\qquad
-	\gamma ~~=~~ \frac { \sqrt{2}\,\delta } { \sqrt{ 1 +  2 |\delta|^2 } }\,,
+	\tgamma ~~=~~ \frac { \sqrt{2}\,\delta } { \sqrt{ 1 +  2 |\delta|^2 } }\,,
 \]
 	and ultimately gives the connection sought for, between the microscopic deformation parameter $ \mu $, and 
 	the macroscopic ``response'' $ \delta $.
@@ -2304,7 +2318,7 @@ In this domain we do not put the string profiles to their asymptotic values, but
 
 	The strength of the bifermionic coupling $ I_{\zeta\xi} $ is  our prime  interest.
 	In \eqref{world_unnorm} we  implicitly assumed that $ \mu $ is real, and therefore
-	the induced $ \gamma $ is also expected to be real.
+	the induced $ \tgamma $ is also expected to be real.
 	Using the zero-mode expressions \eqref{ftprofile} and \eqref{fprofile} we calculate this coupling,
 \begin{align}
 %
@@ -2365,7 +2379,7 @@ In this domain we do not put the string profiles to their asymptotic values, but
 	to the first order in $ \mu $.
 	Since the normalization constants of the right-handed modes $ I_\zeta $, $ I_\xi $ do not
 	depend on $ \mu $ in the leading order (recall, they are \ntwo supersymmetric in the leading order),
-	all dependence of $ \gamma $ and $ \delta $ on $ \mu $ is given by \eqref{biferm_small},
+	all dependence of $ \tgamma $ and $ \delta $ on $ \mu $ is given by \eqref{biferm_small},
 	and it is linear.
 
 	The large-$\mu$ limit is the most interesting limit, as in this limit the relation between $ \delta $ 
@@ -2422,11 +2436,13 @@ In this domain we do not put the string profiles to their asymptotic values, but
 \beq
 \label{gammaresult}
 %	-\, 
-	\gamma ~~=~~ 
+	\tgamma ~~=~~ 
 %	-\, 
 		\frac { \sqrt{2}\,\delta } { \sqrt{ 1 + 2 | \delta |^2 } } 
-		~~=~~ 1 ~~+~~ O\left(\frac{1}{\ln\left(\frac{g_2^2\mu}{m_W}\right)}\right)~.
+		~~=~~ 1 ~~+~~ O\left(\frac{1}{\ln\left(\frac{g_2^2\mu}{m_W}\right)}\right)~
 \eeq
+	(remind that in this paper $ \tgamma $ is related to $ \gamma $ of \cite{SYhet} as
+	$ \tgamma = \sqrt{2/\beta}\, \gamma $).
 	This leads to the following result:
 \beq
 \label{deltaresult}
